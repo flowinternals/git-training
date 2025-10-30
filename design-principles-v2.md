@@ -2,7 +2,7 @@
 - we dont add new code to the index.html, instead we update the appropriate modules/components
 - we keep comments, debugging and console logging to a minimum and cleanup when they are no longer required
 - no bandaid or patch fixes - instead we follow good architectural refactoring practices
-- we update the design, PRD and readme.md files with important changes 
+- we update the design, PRD and readme.md files with important changes
 - ALWAYS stick to the prime directive of optimising the codebase
 - we have single implementations - no fallbacks or backwards compatibility
 - always suggest tests after a change
@@ -10,3 +10,11 @@
 - do not update a bug with a fix until AFTER its been successfully user tested and confirmed fixed
 - do NOT overengineer a solution. If I ask for a simple feature,  keep it simple, stay focused and do not do anymore than what is asked.- we dont regress any functionality when we make a new change
 - we dont add new code to the index.html, instead we update the appropriate modules/components
+- auto-switch mcp accounts when changing projects. refer to firebase-mcp-auto-switching-guide.md
+- Run secrets-scanning before major commits to github. If secrets scanning has not been setup, remind the user of that fact.
+- Secrets in env files only, no secrets in code/commits.
+- Dependency policy (pin, audit cadence, vulnerability SLAs)
+- Data handling: PII minimisation, logging redaction, retention
+- Error handling conventions (no silent catches, user-safe messages)
+- Logging levels and structure; no debug logs in prod
+- Regularly update PRD/design/readme. Dont put commercially sensitive information in the publically available readme.md
